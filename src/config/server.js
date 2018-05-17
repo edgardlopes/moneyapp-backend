@@ -8,6 +8,6 @@ server.use(bodyParser.urlencoded({extended: true}))
 server.use(bodyParser.json())
 server.use(require('./cors'))
 
-server.listen(port, () => console.log(`Backend na porta ${port}`))
+server.listen(process.env.PORT || port, () => console.log(`Backend na porta ${port}`))
 
 module.exports = server
